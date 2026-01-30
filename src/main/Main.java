@@ -8,6 +8,8 @@ import engine.objects.Camera;
 import engine.objects.GameObject;
 import org.lwjgl.glfw.GLFW;
 
+import java.io.File;
+
 public class Main implements Runnable {
     public Thread game; //For making 1 thread run this class.
     public Window window;
@@ -85,6 +87,7 @@ public class Main implements Runnable {
     //Initializes variables and objects
     public void init() {
         System.out.println("Initializing Game!");
+        System.setProperty("org.lwjgl.librarypath", new File("native/windows").getAbsolutePath());
         this.window = new Window(this.WIDTH , this.HEIGHT , "BOMBACLAT");
         this.window.setBackgroundColor(0.1f , 0.1f , 0.1f);
         this.window.create();

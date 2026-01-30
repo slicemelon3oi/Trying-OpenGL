@@ -3,12 +3,13 @@ package engine.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class FileUtils {
     public static String loadAsString(String path) {
         StringBuilder result = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(FileUtils.class.getResourceAsStream(path))))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(FileUtils.class.getResourceAsStream(path)), StandardCharsets.UTF_8))) {
             String line = "";
             while ((line = reader.readLine()) != null) {
                 result.append(line).append("\n");

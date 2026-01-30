@@ -2,10 +2,8 @@
   <artifact type="jar" name="GameMakingPractice:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/GameMakingPractice_jar</output-path>
     <root id="archive" name="GameMakingPractice.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="GameMakingPractice" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/slick-util3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl-assimp.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl-assimp-natives-windows.jar" path-in-jar="/" />
@@ -93,7 +91,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl-yoga-natives-windows.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl-zstd.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl-zstd-natives-windows.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/libs/slick-util3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
